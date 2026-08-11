@@ -1,0 +1,14 @@
+# Segredos — nunca subir
+.env
+
+# Ambiente virtual do Python
+venv/
+__pycache__/
+*.pyc
+
+# Vercel
+.vercel/
+
+# Logs e arquivos temporários
+server.log
+.DS_Store
