@@ -1,10 +1,9 @@
 {
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "*.{html,jpg,jpeg,png,svg,ico}", "use": "@vercel/static" },
     { "src": "main.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "main.py" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/api/(.*)", "dest": "main.py" }
   ]
 }
