@@ -291,10 +291,13 @@
   @media(min-width:860px){.about{grid-template-columns:.8fr 1.2fr;}}
   .avatar{
     width:100%;aspect-ratio:1;border-radius:20px;
+    padding:5px;
     background:linear-gradient(155deg,var(--emerald) 0%, var(--violet) 100%);
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--display);color:#06120D;font-size:64px;font-weight:700;
     box-shadow:0 30px 70px -24px var(--emerald-glow);
+  }
+  .avatar img{
+    width:100%;height:100%;object-fit:cover;object-position:center 15%;
+    border-radius:16px;display:block;
   }
   .about h2{font-size:clamp(26px,3.2vw,34px);margin-bottom:16px;}
   .about p{color:var(--ink-soft);margin-bottom:14px;max-width:560px;}
@@ -535,7 +538,7 @@
   <!-- ABOUT -->
   <section id="sobre">
     <div class="wrap about">
-      <div class="avatar">TM</div>
+      <div class="avatar"><img src="talita-foto.jpg" alt="Foto de Talita Michelini"></div>
       <div>
         <span class="eyebrow">Sobre mim</span>
         <h2>Oi, eu sou a Talita.</h2>
@@ -618,9 +621,9 @@
 
 
 <script>
-  // Front-end e backend estão hospedados juntos na Vercel, então um caminho
-  // relativo funciona tanto em produção quanto ao rodar 'vercel dev' localmente.
-  const API_URL = '/api/contact';
+  // 👉 Depois de fazer o deploy do backend (Render/Railway), troque a URL abaixo
+  // pela URL pública do seu backend, ex: "https://seu-backend.onrender.com/api/contact"
+  const API_URL = 'http://localhost:8000/api/contact';
 
   const form = document.getElementById('contactForm');
   const msg = document.getElementById('formMsg');
