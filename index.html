@@ -621,9 +621,9 @@
 
 
 <script>
-  // 👉 Depois de fazer o deploy do backend (Render/Railway), troque a URL abaixo
-  // pela URL pública do seu backend, ex: "https://seu-backend.onrender.com/api/contact"
-  const API_URL = 'http://localhost:8000/api/contact';
+  // Front-end e backend estão hospedados juntos na Vercel, então um caminho
+  // relativo funciona tanto em produção quanto ao rodar 'vercel dev' localmente.
+  const API_URL = '/api/contact';
 
   const form = document.getElementById('contactForm');
   const msg = document.getElementById('formMsg');
